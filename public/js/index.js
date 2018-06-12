@@ -84,7 +84,7 @@ $(document).ready(function () {
         $(".world-news .cat-selector.kinda-blue").removeClass("kinda-blue")
         $(this).addClass("kinda-blue");
         $(".world-news .post-block").data("coffset",0);
-        loadWorldAsync(category, 0, '+');
+        loadMobileAsync(category, 0, '+');
     });
 
     $(".world-news").on("click", ".btn-left.active", function () {
@@ -96,7 +96,7 @@ $(document).ready(function () {
         }else{
             current = current - 12;
             $(".world-news .post-block").data("coffset",current);
-            loadWorldAsync($(".world-news .cat-selector.kinda-blue").data("category"), current, '+');
+            loadMobileAsync($(".world-news .cat-selector.kinda-blue").data("category"), current, '+');
         }         
     });
 
@@ -109,7 +109,7 @@ $(document).ready(function () {
         }else{
             current = current + 12;
             $(".world-news .post-block").data("coffset",current);
-            loadWorldAsync($(".world-news .cat-selector.kinda-blue").data("category"), current, '-');
+            loadMobileAsync($(".world-news .cat-selector.kinda-blue").data("category"), current, '-');
         }        
     });
 
@@ -122,7 +122,7 @@ $(document).ready(function () {
         }else{
             current = current - 3;
             $(".fashion .post-block").data("coffset",current);
-            loadFashionAsync(current, '+');
+            loadDesignAsync(current, '+');
         }         
     });
 
@@ -135,7 +135,7 @@ $(document).ready(function () {
         }else{
             current = current + 3;
             $(".fashion .post-block").data("coffset",current);
-            loadFashionAsync(current, '-');
+            loadDesignAsync(current, '-');
         }        
     });
 
@@ -148,7 +148,7 @@ $(document).ready(function () {
         }else{
             current = current - 4;
             $(".lifestyle .post-block").data("coffset",current);
-            loadLifestyleAsync(current, '+');
+            loadComputersAsync(current, '+');
         }         
     });
 
@@ -161,7 +161,7 @@ $(document).ready(function () {
         }else{
             current = current + 4;
             $(".lifestyle .post-block").data("coffset",current);
-            loadLifestyleAsync(current, '-');
+            loadComputersAsync(current, '-');
         }        
     });
 
@@ -174,7 +174,7 @@ $(document).ready(function () {
         }else{
             current = current - 5;
             $(".sports .post-block").data("coffset",current);
-            loadSportsAsync(current, '+');
+            loadDesktopAsync(current, '+');
         }         
     });
 
@@ -187,7 +187,7 @@ $(document).ready(function () {
         }else{
             current = current + 5;
             $(".sports .post-block").data("coffset",current);
-            loadSportsAsync(current, '-');
+            loadDesktopAsync(current, '-');
         }        
     });
 
@@ -226,7 +226,7 @@ $(document).ready(function () {
         }else{
             current = current - 4;
             $(".food-health .post-block").data("coffset",current);
-            loadFoodHealthAsync(current, '+');
+            loadLaptopAsync(current, '+');
         }         
     });
 
@@ -239,7 +239,7 @@ $(document).ready(function () {
         }else{
             current = current + 4;
             $(".food-health .post-block").data("coffset",current);
-            loadFoodHealthAsync(current, '-');
+            loadLaptopAsync(current, '-');
         }        
     });
 
@@ -266,7 +266,7 @@ $(document).ready(function () {
         });
     }
 
-    function loadWorldAsync(category, offset, direction) {
+    function loadMobileAsync(category, offset, direction) {
         $.ajax({
             url: '/index.php?controller=posts&action=getByCategoryDetailed',
             type: 'GET',
@@ -287,11 +287,11 @@ $(document).ready(function () {
         });
     }
 
-    function loadFashionAsync(offset, direction) {
+    function loadDesignAsync(offset, direction) {
         $.ajax({
             url: '/index.php?controller=posts&action=getByCategoryDetailed',
             type: 'GET',
-            data: "category=Fashion&count=3&offset=" + offset,
+            data: "category=web-design&count=3&offset=" + offset,
             success: function (data) {
                 $data = $(data).filter("div");
                 updateArticles($(".fashion .post-preview-detailed"), $data, direction);
@@ -299,11 +299,11 @@ $(document).ready(function () {
         });
     }
 
-    function loadLifestyleAsync(offset, direction) {
+    function loadComputersAsync(offset, direction) {
         $.ajax({
             url: '/index.php?controller=posts&action=getByCategory',
             type: 'GET',
-            data: "category=Lifestyle&count=4&offset=" + offset,
+            data: "category=computers&count=4&offset=" + offset,
             success: function (data) {
                 $data = $(data).filter("div");
                 updateArticles($(".lifestyle .post-preview-large"), $data.eq(0), direction);
@@ -312,11 +312,11 @@ $(document).ready(function () {
         });
     }
 
-    function loadSportsAsync(offset, direction) {
+    function loadDesktopAsync(offset, direction) {
         $.ajax({
             url: '/index.php?controller=posts&action=getByCategoryDetailed',
             type: 'GET',
-            data: "category=Sports&count=1&offset=" + offset,
+            data: "category=desktop&count=1&offset=" + offset,
             success: function (data) {
                 $data = $(data).filter("div");
                 updateArticles($(".sports .post-preview-detailed"), $data, direction);
@@ -325,7 +325,7 @@ $(document).ready(function () {
         $.ajax({
             url: '/index.php?controller=posts&action=getByCategory',
             type: 'GET',
-            data: "category=Sports&count=4&offset=" + (parseInt(offset) + 1),
+            data: "category=desktop&count=4&offset=" + (parseInt(offset) + 1),
             success: function (data) {
                 $data = $(data).filter("div");
                 updateArticles($(".sports .post-preview"), $data, direction);
@@ -345,11 +345,11 @@ $(document).ready(function () {
         });
     }
 
-    function loadFoodHealthAsync(offset, direction) {
+    function loadLaptopAsync(offset, direction) {
         $.ajax({
             url: '/index.php?controller=posts&action=getByCategory',
             type: 'GET',
-            data: "category=food-health&count=4&offset=" + offset,
+            data: "category=laptop&count=4&offset=" + offset,
             success: function (data) {
                 $data = $(data).filter("div");
                 updateArticles($(".food-health .post-preview"), $data, direction)
@@ -373,11 +373,11 @@ $(document).ready(function () {
 
     //main
     loadSliderAsync();
-    loadWorldAsync("World", 0, '+');
-    loadFashionAsync(0, '+');
-    loadLifestyleAsync(0, '+');
-    loadSportsAsync(0, '+');
+    loadMobileAsync("Mobile", 0, '+');
+    loadDesignAsync(0, '+');
+    loadComputersAsync(0, '+');
+    loadDesktopAsync(0, '+');
     loadTechnologyAsync(0, '+');
-    loadFoodHealthAsync(0, '+');
+    loadLaptopAsync(0, '+');
     loadRecenthAsync();
 });

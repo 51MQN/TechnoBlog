@@ -45,20 +45,20 @@
 
     <section class="category world-news">
         <div class="category-head">
-            <h2>World News</h2>
+            <h2>Mobile</h2>
             <div class="hr-line"></div>
             <nav>
                 <ul>
-                    <li class="cat-selector kinda-blue" data-category="world" data-max-length="<?php echo count(Post::get_by_category(Category::get_by_url_name('world')->id))?>">All</li>
-                    <li class="cat-selector" data-category="asia" data-max-length="<?php echo count(Post::get_by_category(Category::get_by_url_name('asia')))?>">Asia</li>
-                    <li class="cat-selector" data-category="europe" data-max-length="<?php echo count(Post::get_by_category(Category::get_by_url_name('europe')))?>">Europe</li>
-                    <li class="cat-selector" data-category="america" data-max-length="<?php echo count(Post::get_by_category(Category::get_by_url_name('america')))?>">America</li>
+                    <li class="cat-selector kinda-blue" data-category="mobile" data-max-length="<?php echo count(Post::get_by_category(Category::get_by_url_name('mobile')->id))?>">All</li>
+                    <li class="cat-selector" data-category="android" data-max-length="<?php echo count(Post::get_by_category(Category::get_by_url_name('android')))?>">Android</li>
+                    <li class="cat-selector" data-category="ios" data-max-length="<?php echo count(Post::get_by_category(Category::get_by_url_name('ios')))?>">IOS</li>
+                    <li class="cat-selector" data-category="windows-phone" data-max-length="<?php echo count(Post::get_by_category(Category::get_by_url_name('windows-phone')))?>">Windows Phone</li>
 
                     <li>
                         <img class="btn-left" src="/public/img/index/btn-arrow-left.png" alt="btn-left" />
                     </li>
                     <li>
-                        <img class="btn-right <?php echo count(Post::get_by_category(Category::get_by_url_name('world')->id)) > 12 ? "active" : ""?>" src="/public/img/index/btn-arrow-right.png" alt="btn-right" />
+                        <img class="btn-right <?php echo count(Post::get_by_category(Category::get_by_url_name('mobile')->id)) > 12 ? "active" : ""?>" src="/public/img/index/btn-arrow-right.png" alt="btn-right" />
                     </li>
                 </ul>
             </nav>
@@ -143,16 +143,16 @@
 
     </section>
 
-    <section class="category fashion" data-max-length="<?php echo count(Post::get_by_category(Category::get_by_url_name('fashion')->id))?>">
+    <section class="category fashion" data-max-length="<?php echo count(Post::get_by_category(Category::get_by_url_name('web-design')->id))?>">
         <div class="category-head">
-            <h2>Fashion</h2>
+            <h2>Web Design</h2>
             <div class="hr-line"></div>
             <nav>
                 <ul>
                     <li class="btn-left">
                         <img src="/public/img/index/btn-arrow-left.png" alt="btn-left" />
                     </li>
-                    <li class="btn-right <?php echo count(Post::get_by_category(Category::get_by_url_name('fashion')->id)) > 3 ? "active" : ""?>">
+                    <li class="btn-right <?php echo count(Post::get_by_category(Category::get_by_url_name('web-design')->id)) > 3 ? "active" : ""?>">
                         <img src="/public/img/index/btn-arrow-right.png" alt="btn-right" />
                     </li>
                 </ul>
@@ -191,16 +191,16 @@
 
     <div class="two-col nowrap">
         <div class="left-col">
-            <section class="category lifestyle" data-max-length="<?php echo count(Post::get_by_category(Category::get_by_url_name('lifestyle')->id))?>">
+            <section class="category lifestyle" data-max-length="<?php echo count(Post::get_by_category(Category::get_by_url_name('computers')->id))?>">
                 <div class="category-head">
-                    <h2>Lifestyle</h2>
+                    <h2>Computers</h2>
                     <div class="hr-line"></div>
                     <nav>
                         <ul>
                             <li class="btn-left">
                                 <img src="/public/img/index/btn-arrow-left.png" alt="btn-left" />
                             </li>
-                            <li class="btn-right <?php echo count(Post::get_by_category(Category::get_by_url_name('lifestyle')->id)) > 4 ? "active" : ""?>">
+                            <li class="btn-right <?php echo count(Post::get_by_category(Category::get_by_url_name('computers')->id)) > 4 ? "active" : ""?>">
                                 <img src="/public/img/index/btn-arrow-right.png" alt="btn-right" />
                             </li>
                         </ul>
@@ -237,16 +237,16 @@
 
             </section>
 
-            <section class="category sports" data-max-length="<?php echo count(Post::get_by_category(Category::get_by_url_name('sports')->id))?>">
+            <section class="category sports" data-max-length="<?php echo count(Post::get_by_category(Category::get_by_url_name('desktop')->id))?>">
                 <div class="category-head">
-                    <h2>Sports</h2>
+                    <h2>Desktop</h2>
                     <div class="hr-line"></div>
                     <nav>
                         <ul>
                             <li class="btn-left">
                                 <img src="/public/img/index/btn-arrow-left.png" alt="btn-left" />
                             </li>
-                            <li class="btn-right <?php echo count(Post::get_by_category(Category::get_by_url_name('sports')->id)) > 5 ? "active" : ""?>">
+                            <li class="btn-right <?php echo count(Post::get_by_category(Category::get_by_url_name('desktop')->id)) > 5 ? "active" : ""?>">
                                 <img src="/public/img/index/btn-arrow-right.png" alt="btn-right" />
                             </li>
                         </ul>
@@ -326,16 +326,16 @@
 
                 </section>
 
-                <section class="category food-health" data-max-length="<?php echo count(Post::get_by_category(Category::get_by_url_name('food-health')->id))?>">
+                <section class="category food-health" data-max-length="<?php echo count(Post::get_by_category(Category::get_by_url_name('laptop')->id))?>">
                     <div class="category-head">
-                        <h2>Food &amp; Health</h2>
+                        <h2>Laptop</h2>
                         <div class="hr-line"></div>
                         <nav>
                             <ul>
                                 <li class="btn-left">
                                     <img src="/public/img/index/btn-arrow-left.png" alt="btn-left" />
                                 </li>
-                                <li class="btn-right <?php echo count(Post::get_by_category(Category::get_by_url_name('food-health')->id)) > 4 ? "active" : ""?>">
+                                <li class="btn-right <?php echo count(Post::get_by_category(Category::get_by_url_name('laptop')->id)) > 4 ? "active" : ""?>">
                                     <img src="/public/img/index/btn-arrow-right.png" alt="btn-right" />
                                 </li>
                             </ul>
@@ -387,7 +387,7 @@
                     <a href="/home/">
                         <h2>
                             <span class="logo-express white">Express</span>
-                            <span class="logo-blog kinda-blue">Blogs &amp; Magazines</span>
+                            <span class="logo-blog kinda-blue">Techno BLog</span>
                         </h2>
                     </a>
                 </div>

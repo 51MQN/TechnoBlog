@@ -39,7 +39,7 @@
                     <a href="/home/">
                         <h2>
                             <span class="logo-express white">Express</span>
-                            <span class="logo-blog kinda-blue">Blogs & Magazines</span>
+                            <span class="logo-blog kinda-blue">Techno Blog</span>
                         </h2>
                     </a>
                 </div>

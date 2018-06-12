@@ -13,7 +13,7 @@
             <a href="/home/">
                 <h1>
                     <span class="logo-express black">Express</span>
-                    <span class="logo-blog kinda-blue">Blogs &amp; Magazines</span>
+                    <span class="logo-blog kinda-blue">Techno Blog</span>
                 </h1>
             </a>
         </div>
@@ -58,19 +58,19 @@
                 <a href="/home/">Home</a>
             </li>
             <li class="not-selected-button">
-                <a href="/home/categories/world/">World</a>
+                <a href="/home/categories/mobile/">Mobile</a>
+            </li>        
+            <li class="not-selected-button">
+                <a href="/home/categories/computers/">Computers</a>
             </li>
             <li class="not-selected-button">
-                <a href="/home/categories/sports/">Sports</a>
+                <a href="/home/categories/desktop/">Desktop</a>
             </li>
             <li class="not-selected-button">
-                <a href="/home/categories/lifestyle/">Lifestyle</a>
+                <a href="/home/categories/laptop/">Laptop</a>
             </li>
             <li class="not-selected-button">
-                <a href="/home/categories/food-health/">Food &amp; Health</a>
-            </li>
-            <li class="not-selected-button">
-                <a href="/home/categories/fashion/">Fashion</a>
+                <a href="/home/categories/web-design/">Web Design</a>
             </li>
             <li class="not-selected-button">
                 <a href="/home/categories/technology/">Technology</a>

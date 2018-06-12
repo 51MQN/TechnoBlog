@@ -105,7 +105,7 @@ a {
     font-family: 'Open Sans Bold', sans-serif;
     text-align: center;
     font-size: 15px;
-    margin: -35px 0 -80px 40px;
+    margin: -35px 0 -80px 48px;
     order: -1;
 }
 
@@ -772,7 +772,7 @@ footer ul {
 }
 
 .footer-info .logo .logo-blog {
-    margin: 0px 0 -25px 40px;
+    margin: 0px 0 -25px 48px;
 }
 
 .footer-info p {

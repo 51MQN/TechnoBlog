@@ -20,7 +20,7 @@ if ($lastpage > 1) {
     } elseif ($lastpage > 5 + ($adjacents * 2)) //enough pages to hide some
     {
 //close to beginning; only hide later pages
-        if ($pageNum < 1 + ($adjacents * 2)) {
+        if ($pageNum < 2 + ($adjacents * 2)) {
             for ($counter = 1; $counter < 4 + ($adjacents * 2); $counter++) {
                 if ($counter == $pageNum) {
                     $pagination .= "<li class=\"page-item active\"><a href='' class='page-link'>$counter</a></li>";

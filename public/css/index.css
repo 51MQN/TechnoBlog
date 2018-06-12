@@ -118,7 +118,7 @@ a {
     font-family: 'Open Sans Bold', sans-serif;
     text-align: center;
     font-size: 20px;
-    margin: 0px 0 -35px 80px;
+    margin: 0px 0 -35px 30px;
     order: -1;
 }
 
@@ -799,7 +799,7 @@ footer .post-metadata {
 }
 
 .footer-info .logo .logo-blog {
-    margin: 0px 0 -35px 60px;
+    margin: 0px 0 -35px 65px;
 }
 
 .footer-info p {

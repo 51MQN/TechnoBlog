@@ -6,7 +6,7 @@
             <a href="/home/">
                 <h1>
                     <span class="logo-express black">Express</span>
-                    <span class="logo-blog kinda-blue">Blogs & Magazines</span>
+                    <span class="logo-blog kinda-blue">Techno Blog</span>
                 </h1>
             </a>
         </div>
@@ -16,11 +16,11 @@
                     <a href="/home/">Home</a>
                 </li>
                 <li class="not-selected-button">
-                    <a href="/home/categories/world/">World</a>
+                    <a href="/home/categories/mobile/">Mobile</a>
                     <div>
                         <div class="submenu-space"></div>
                         <ul>
-                            <?php foreach (Category::get_by_parent_id(Category::get_by_url_name("world")->id) as $category) {?>
+                            <?php foreach (Category::get_by_parent_id(Category::get_by_url_name("mobile")->id) as $category) {?>
                                 <li class="dir">
                                     <a href="/home/categories/<?php echo htmlspecialchars($category->url_name) ?>"><?php echo htmlspecialchars($category->name) ?></a>
                                  </li>
@@ -29,11 +29,11 @@
                     </div>
                 </li>
                 <li class="not-selected-button">
-                    <a href="/home/categories/sports/">Sport</a>
+                    <a href="/home/categories/computers/">Computers</a>
                     <div>
                         <div class="submenu-space"></div>
                         <ul>
-                            <?php foreach (Category::get_by_parent_id(Category::get_by_url_name("sports")->id) as $category) {?>
+                            <?php foreach (Category::get_by_parent_id(Category::get_by_url_name("computers")->id) as $category) {?>
                                     <li class="dir">
                                         <a href="/home/categories/<?php echo htmlspecialchars($category->url_name) ?>"><?php echo htmlspecialchars($category->name) ?></a>
                                     </li>
@@ -42,11 +42,11 @@
                     </div>
                 </li>
                 <li class="not-selected-button">
-                    <a href="/home/categories/lifestyle/">Lifestyle</a>
+                    <a href="/home/categories/web-design/">Web Design</a>
                     <div>
                         <div class="submenu-space"></div>
                         <ul>
-                            <?php foreach (Category::get_by_parent_id(Category::get_by_url_name("lifestyle")->id) as $category) {?>
+                            <?php foreach (Category::get_by_parent_id(Category::get_by_url_name("web-design")->id) as $category) {?>
                                     <li class="dir">
                                         <a href="/home/categories/<?php echo htmlspecialchars($category->url_name) ?>"><?php echo htmlspecialchars($category->name) ?></a>
                                     </li>
@@ -66,20 +66,7 @@
                             <?php }?>
                         </ul>
                     </div>
-                </li>
-                <li class="not-selected-button">
-                    <a href="/home/categories/food-health/">Food &amp; Health</a>
-                    <div>
-                        <div class="submenu-space"></div>
-                        <ul>
-                            <?php foreach (Category::get_by_parent_id(Category::get_by_url_name("technology")->id) as $category) {?>
-                                    <li class="dir">
-                                        <a href="/home/categories/<?php echo htmlspecialchars($category->url_name) ?>"><?php echo htmlspecialchars($category->name) ?></a>
-                                    </li>
-                            <?php }?>
-                        </ul>
-                    </div>
-                </li>
+                </li>                
                 <li>
                     <a class="btn-login" href="/admin/login/"><i class="material-icons">exit_to_app</i></a>
                     <a class="btn-search" href="/home/posts/search/"><i class="material-icons">search</i></a>            

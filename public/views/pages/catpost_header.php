@@ -10,6 +10,7 @@
                 </h1>
             </a>
         </div>
+        <div class="burger closed"><i class="material-icons">reorder</i></div>
         <nav class="menu grey">
             <ul>
                 <li class="not-selected-button">

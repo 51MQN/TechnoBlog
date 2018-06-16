@@ -51,7 +51,7 @@
             </li>
         </ul>
     </div>
-
+    <div class="burger closed"><i class="material-icons">reorder</i></div>
     <nav class="menu">
         <ul>
             <li class="not-selected-button">

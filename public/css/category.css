@@ -905,6 +905,11 @@ footer form button {
     margin-left: -5px;
 }
 
+.burger{
+    display: none;
+    width: 100%;
+}
+
 @media screen and (max-width: 768px) {
     body {
         overflow-x: hidden;
@@ -974,5 +979,22 @@ footer form button {
     
     .menu>ul>li:hover>div>ul {
         display: none;
+    }
+
+    .burger {
+        display: block;
+        position: absolute;
+        top:30px;        
+    }
+    .burger i{
+        float: right;
+        font-weight: bold;
+        font-size: 40px;
+        cursor: pointer;
+    }
+
+    nav.menu{
+        height: 0;
+        overflow: hidden;
     }
 }

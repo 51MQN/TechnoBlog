@@ -30,6 +30,35 @@ $(document).ready(function () {
         return false;
     });
 
+
+    $('header.top-head').on('click', ".burger.closed i", function () {
+        $('.burger.closed').removeClass('closed').addClass('opened');
+        $('nav.menu').animate({
+            height: '490px'
+        }, 1000);
+    });
+
+    $(window).resize(function () {
+        if ($(window).width() > 768) {
+            $("nav.menu").attr("style", "height: 100%");
+        }
+        else {
+            if ($('.burger.opened').length > 0){
+                $("nav.menu").attr("style", "height: 490px");
+            }
+            else{
+                $("nav.menu").attr("style", "height: 0");
+            }
+        }
+    });
+
+    $('header.top-head').on('click', ".burger.opened i", function () {
+        $('.burger.opened').removeClass('opened').addClass('closed');
+        $('nav.menu').animate({
+            height: '0'
+        }, 1000);
+    });
+
     function slideThroughList() {
         var $postList = $(".slider .post-preview");
         var $bigPost = $(".slider .selected-post-preview");
@@ -83,168 +112,168 @@ $(document).ready(function () {
         category = $(this).data("category");
         $(".world-news .cat-selector.kinda-blue").removeClass("kinda-blue")
         $(this).addClass("kinda-blue");
-        $(".world-news .post-block").data("coffset",0);
+        $(".world-news .post-block").data("coffset", 0);
         loadMobileAsync(category, 0, '+');
     });
 
     $(".world-news").on("click", ".btn-left.active", function () {
         $(".world-news .btn-right").addClass("active")
-        max=$(".world-news .cat-selector.kinda-blue").data("max-length");
+        max = $(".world-news .cat-selector.kinda-blue").data("max-length");
         current = $(".world-news .post-block").data("coffset");
-        if((current - 12) < 0){
+        if ((current - 12) < 0) {
             $(this).removeClass("active");
-        }else{
+        } else {
             current = current - 12;
-            $(".world-news .post-block").data("coffset",current);
+            $(".world-news .post-block").data("coffset", current);
             loadMobileAsync($(".world-news .cat-selector.kinda-blue").data("category"), current, '+');
-        }         
+        }
     });
 
     $(".world-news").on("click", ".btn-right.active", function () {
         $(".world-news .btn-left").addClass("active")
-        max=$(".world-news .cat-selector.kinda-blue").data("max-length");
+        max = $(".world-news .cat-selector.kinda-blue").data("max-length");
         current = $(".world-news .post-block").data("coffset");
-        if((current + 12) > max){
+        if ((current + 12) > max) {
             $(this).removeClass("active");
-        }else{
+        } else {
             current = current + 12;
-            $(".world-news .post-block").data("coffset",current);
+            $(".world-news .post-block").data("coffset", current);
             loadMobileAsync($(".world-news .cat-selector.kinda-blue").data("category"), current, '-');
-        }        
+        }
     });
 
     $(".fashion").on("click", ".btn-left.active", function () {
         $(".fashion .btn-right").addClass("active")
-        max=$(".fashion").data("max-length");
+        max = $(".fashion").data("max-length");
         current = $(".fashion .post-block").data("coffset");
-        if((current - 3) < 0){
+        if ((current - 3) < 0) {
             $(this).removeClass("active");
-        }else{
+        } else {
             current = current - 3;
-            $(".fashion .post-block").data("coffset",current);
+            $(".fashion .post-block").data("coffset", current);
             loadDesignAsync(current, '+');
-        }         
+        }
     });
 
     $(".fashion").on("click", ".btn-right.active", function () {
         $(".fashion .btn-left").addClass("active")
-        max=$(".fashion").data("max-length");
+        max = $(".fashion").data("max-length");
         current = $(".fashion .post-block").data("coffset");
-        if((current + 3) > max){
+        if ((current + 3) > max) {
             $(this).removeClass("active");
-        }else{
+        } else {
             current = current + 3;
-            $(".fashion .post-block").data("coffset",current);
+            $(".fashion .post-block").data("coffset", current);
             loadDesignAsync(current, '-');
-        }        
+        }
     });
 
     $(".lifestyle").on("click", ".btn-left.active", function () {
         $(".lifestyle .btn-right").addClass("active")
-        max=$(".lifestyle").data("max-length");
+        max = $(".lifestyle").data("max-length");
         current = $(".lifestyle .post-block").data("coffset");
-        if((current - 4) < 0){
+        if ((current - 4) < 0) {
             $(this).removeClass("active");
-        }else{
+        } else {
             current = current - 4;
-            $(".lifestyle .post-block").data("coffset",current);
+            $(".lifestyle .post-block").data("coffset", current);
             loadComputersAsync(current, '+');
-        }         
+        }
     });
 
     $(".lifestyle").on("click", ".btn-right.active", function () {
         $(".lifestyle .btn-left").addClass("active")
-        max=$(".lifestyle").data("max-length");
+        max = $(".lifestyle").data("max-length");
         current = $(".lifestyle .post-block").data("coffset");
-        if((current + 4) > max){
+        if ((current + 4) > max) {
             $(this).removeClass("active");
-        }else{
+        } else {
             current = current + 4;
-            $(".lifestyle .post-block").data("coffset",current);
+            $(".lifestyle .post-block").data("coffset", current);
             loadComputersAsync(current, '-');
-        }        
+        }
     });
 
     $(".sports").on("click", ".btn-left.active", function () {
         $(".sports .btn-right").addClass("active")
-        max=$(".sports").data("max-length");
+        max = $(".sports").data("max-length");
         current = $(".sports .post-block").data("coffset");
-        if((current - 5) < 0){
+        if ((current - 5) < 0) {
             $(this).removeClass("active");
-        }else{
+        } else {
             current = current - 5;
-            $(".sports .post-block").data("coffset",current);
+            $(".sports .post-block").data("coffset", current);
             loadDesktopAsync(current, '+');
-        }         
+        }
     });
 
     $(".sports").on("click", ".btn-right.active", function () {
         $(".sports .btn-left").addClass("active")
-        max=$(".sports").data("max-length");
+        max = $(".sports").data("max-length");
         current = $(".sports .post-block").data("coffset");
-        if((current + 5) > max){
+        if ((current + 5) > max) {
             $(this).removeClass("active");
-        }else{
+        } else {
             current = current + 5;
-            $(".sports .post-block").data("coffset",current);
+            $(".sports .post-block").data("coffset", current);
             loadDesktopAsync(current, '-');
-        }        
+        }
     });
 
     $(".technology").on("click", ".btn-left.active", function () {
         $(".technology .btn-right").addClass("active")
-        max=$(".technology").data("max-length");
+        max = $(".technology").data("max-length");
         current = $(".technology .post-block").data("coffset");
-        if((current - 2) < 0){
+        if ((current - 2) < 0) {
             $(this).removeClass("active");
-        }else{
+        } else {
             current = current - 2;
-            $(".technology .post-block").data("coffset",current);
+            $(".technology .post-block").data("coffset", current);
             loadTechnologyAsync(current, '+');
-        }         
+        }
     });
 
     $(".technology").on("click", ".btn-right.active", function () {
         $(".technology .btn-left").addClass("active")
-        max=$(".technology").data("max-length");
+        max = $(".technology").data("max-length");
         current = $(".technology .post-block").data("coffset");
-        if((current + 2) > max){
+        if ((current + 2) > max) {
             $(this).removeClass("active");
-        }else{
+        } else {
             current = current + 2;
-            $(".technology .post-block").data("coffset",current);
+            $(".technology .post-block").data("coffset", current);
             loadTechnologyAsync(current, '-');
-        }        
+        }
     });
 
     $(".food-health").on("click", ".btn-left.active", function () {
         $(".food-health .btn-right").addClass("active")
-        max=$(".food-health").data("max-length");
+        max = $(".food-health").data("max-length");
         current = $(".food-health .post-block").data("coffset");
-        if((current - 4) < 0){
+        if ((current - 4) < 0) {
             $(this).removeClass("active");
-        }else{
+        } else {
             current = current - 4;
-            $(".food-health .post-block").data("coffset",current);
+            $(".food-health .post-block").data("coffset", current);
             loadLaptopAsync(current, '+');
-        }         
+        }
     });
 
     $(".food-health").on("click", ".btn-right.active", function () {
         $(".food-health .btn-left").addClass("active")
-        max=$(".food-health").data("max-length");
+        max = $(".food-health").data("max-length");
         current = $(".food-health .post-block").data("coffset");
-        if((current + 4) > max){
+        if ((current + 4) > max) {
             $(this).removeClass("active");
-        }else{
+        } else {
             current = current + 4;
-            $(".food-health .post-block").data("coffset",current);
+            $(".food-health .post-block").data("coffset", current);
             loadLaptopAsync(current, '-');
-        }        
+        }
     });
 
     function updateArticles(array, data, direction) {
-        if (direction === '-'){
+        if (direction === '-') {
             array = $(array.get().reverse());
             data = $(data.get().reverse());
         }
@@ -363,7 +392,7 @@ $(document).ready(function () {
             type: 'GET',
             data: "count=4",
             success: function (data) {
-                $data = $(data).filter("div");               
+                $data = $(data).filter("div");
                 $("aside .recent .post-preview").each(function (index, element) {
                     $(element).html($data.eq(index).html());
                 });

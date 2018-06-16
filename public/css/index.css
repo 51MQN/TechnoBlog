@@ -929,6 +929,11 @@ footer .category-head h2 {
     width: 100%;
 }
 
+.burger{
+    display: none;
+    width: 100%;
+}
+
 @media screen and (max-width: 768px) {
     body {
         overflow-x: hidden;
@@ -1045,4 +1050,20 @@ footer .category-head h2 {
         display: none;
     }
     
+    .burger {
+        display: block;
+        position: absolute;
+        top:35px;        
+    }
+    .burger i{
+        float: right;
+        font-weight: bold;
+        font-size: 40px;
+        cursor: pointer;
+    }
+
+    nav.menu{
+        height: 0;
+        overflow: hidden;
+    }
 }

@@ -119,18 +119,13 @@ a {
     order: -1;
 }
 
-.menu {
-    position: relative;
-    z-index: 15;
-}
-
 .menu>ul {
     padding: 0px;
     display: flex;
     justify-content: space-between;
     font-size: 16px;
     position: relative;
-    z-index: 0;
+    z-index: 60;
     width: 710px;
 }
 
@@ -149,6 +144,7 @@ a {
     background-color: #000000;
     border-top: 1px solid #00aeef;
     border-bottom: 1px solid #00aeef;
+    z-index: 100;
 }
 
 .menu>ul>li:hover .submenu-space {
@@ -596,6 +592,11 @@ footer form button {
     width: 100%;
 }
 
+.burger{
+    display: none;
+    width: 100%;
+}
+
 @media screen and (max-width: 768px) {
     body {
         overflow-x: hidden;
@@ -627,6 +628,13 @@ footer form button {
     .menu ul{
         flex-direction: column;
         width: 100%;
+    }
+    .menu>ul>li:hover .submenu-space {
+        display: none;
+    }
+    
+    .menu>ul>li:hover>div>ul {
+        display: none;
     }
     aside {
         display: none;
@@ -662,5 +670,22 @@ footer form button {
     }
     footer form{
         margin:auto;
+    }
+    .burger {
+        display: block;
+        position: absolute;
+        top:30px;        
+    }
+    .burger i{
+        float: right;
+        font-weight: bold;
+        font-size: 40px;
+        cursor: pointer;
+        color: #00aeef;
+    }
+
+    nav.menu{
+        height: 0;
+        overflow: hidden;
     }
 }
